@@ -1,0 +1,27 @@
+
+
+
+        
+
+        <div class="col-md-6 offset-3">
+            <div class="card mt-5">
+            <div class="card-header">
+            {{blogobj.title}}
+        </div>
+        <div class="card-body">
+            {{blogobj.body}}
+        </div>
+        <div class="card-footer d-flex justify-content-between">
+           <button 
+           [routerLink]="['/blog',blogId,'edit']"
+           mat-mini-fab color="primary">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button
+        (click)="onremove()"
+         mat-mini-fab color="warn">
+          <mat-icon>delete</mat-icon>
+        </button>
+        </div>
+        </div>
+        </div>

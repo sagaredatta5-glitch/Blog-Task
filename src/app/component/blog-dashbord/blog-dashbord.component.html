@@ -1,0 +1,16 @@
+
+<div class="row mt-4 text-right mb-3">
+    <div class="col-md-12">
+    <button 
+    routerLink="addblog"
+    mat-raised-button color="primary">Add Blog</button>
+</div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-4" *ngFor="let blog of blogarry">
+    <app-blog-card [blogs]="blog"> </app-blog-card>
+    
+</div>
+</div>

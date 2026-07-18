@@ -1,0 +1,43 @@
+
+
+<div class="col-6 offset-3 mt-4">
+    <div class="card">
+    <div class="card-body">
+        <form [formGroup]="blogform" (ngSubmit)="onsubmitblog()">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input 
+                formControlName="title"
+                class="form-control"
+                type="text">
+            </div>
+             <div class="form-group">
+                <label for="body">Content</label>
+                <input 
+                formControlName="body"
+                class="form-control"
+                type="text">
+            </div>
+             <div class="form-group">
+                <label for="userId">UserId</label>
+               <select 
+               formControlName="userId"
+               class="form-control"
+               >
+            <option value="1">1</option> 
+            <option value="2">2</option>   
+            <option value="3">3</option>   
+            </select>
+            </div>
+            <button
+            *ngIf="!isineditmode"
+             mat-raised-button color="primary" class="w-100">Add Blog</button>
+            <button
+            (click)="onupdate()"
+            *ngIf="isineditmode"
+             mat-raised-button color="warn" class="w-100">Update Blog</button>
+
+        </form>
+    </div>
+</div>
+</div>
